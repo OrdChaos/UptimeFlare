@@ -11,7 +11,6 @@ const pageConfig: PageConfig = {
     '统计': ['umami_heartbeat'],
     '联邦': ['gts_instance'],
   },
-  customFooter: 'Powered by UptimeFlare',
 }
 
 const workerConfig: WorkerConfig = {
