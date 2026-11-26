@@ -11,7 +11,7 @@ const pageConfig: PageConfig = {
   logo: '/logo.svg?v=2',
 
   links: [
-    { link: 'https://www.ordchaos.com/', label: '谐元场域' },
+    { link: 'https://www.ordchaos.com/', label: '主站' },
   ],
 
   group: {
@@ -29,24 +29,38 @@ const pageConfig: PageConfig = {
         padding: 18px 16px 10px;
         text-align: center;
       }
+
       .uf-footer a {
-        color: var(--mantine-color-anchor, #3b82f6);
         text-decoration: none;
-        border-bottom: 1px solid rgba(128, 128, 128, 0.35);
+        border-bottom: 1px solid;
         transition: opacity 0.15s ease;
       }
+
+      [data-mantine-color-scheme='light'] .uf-footer a {
+        color: #3f6b5f;
+        border-bottom-color: rgba(63, 107, 95, 0.28);
+      }
+
+      [data-mantine-color-scheme='dark'] .uf-footer a {
+        color: #8fc7b8;
+        border-bottom-color: rgba(143, 199, 184, 0.3);
+      }
+
       .uf-footer a:hover {
         opacity: 0.7;
       }
+
       .uf-footer .brand {
         font-weight: 600;
         letter-spacing: 0.06em;
         color: var(--mantine-color-text);
       }
+
       .uf-footer .sep {
         color: var(--mantine-color-dimmed);
         opacity: 0.4;
       }
+
       .uf-footer .meta {
         margin-top: 8px;
         font-size: 11px;
@@ -60,10 +74,6 @@ const pageConfig: PageConfig = {
         <span class="brand">谐元场域 · 状态监控</span>
         <span class="sep">/</span>
         <a href="https://www.ordchaos.com/" target="_blank" rel="noopener noreferrer">主站</a>
-        <span class="sep">/</span>
-        <a href="https://social.ordchaos.com/@ordchaos" target="_blank" rel="noopener noreferrer">联邦宇宙</a>
-        <span class="sep">/</span>
-        <a href="https://github.com/OrdChaos/UptimeFlare" target="_blank" rel="noopener noreferrer">状态页源码</a>
       </div>
       <div class="meta">
         由 <a href="https://github.com/lyc8503/UptimeFlare" target="_blank" rel="noopener noreferrer">UptimeFlare</a> 驱动 · 独立于主站运行
