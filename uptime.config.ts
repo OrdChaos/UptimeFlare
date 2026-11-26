@@ -30,7 +30,7 @@ const workerConfig: WorkerConfig = {
     },
     {
       id: 'artalk_api',
-      name: 'Artalk API',
+      name: 'Artalk',
       method: 'GET',
       target: 'https://comment.ordchaos.com/api/v2/conf',
       expectedCodes: [200],
@@ -40,7 +40,7 @@ const workerConfig: WorkerConfig = {
     },
     {
       id: 'umami_heartbeat',
-      name: 'Umami Heartbeat',
+      name: 'Umami',
       method: 'GET',
       target: 'https://analysis.ordchaos.com/api/heartbeat',
       expectedCodes: [200],
