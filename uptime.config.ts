@@ -2,15 +2,74 @@ import { MaintenanceConfig, PageConfig, WorkerConfig } from './types/config'
 
 const pageConfig: PageConfig = {
   title: '谐元场域 · 服务状态',
+
+  // 浏览器标签页图标
+  // 如果已经放了 public/favicon.svg，改成 '/favicon.svg?v=1'
+  favicon: 'https://www.ordchaos.com/img/icons/svg.svg',
+
+  // 导航栏 Wordmark
+  logo: '/logo.svg?v=2',
+
   links: [
     { link: 'https://www.ordchaos.com/', label: '谐元场域' },
   ],
+
   group: {
     '博客': ['blog_home'],
     '评论': ['artalk_api'],
     '统计': ['umami_heartbeat'],
     '联邦': ['gts_instance'],
   },
+
+  customFooter: `
+    <style>
+      .uf-footer {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 18px 16px 10px;
+        text-align: center;
+      }
+      .uf-footer a {
+        color: var(--mantine-color-anchor, #3b82f6);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.35);
+        transition: opacity 0.15s ease;
+      }
+      .uf-footer a:hover {
+        opacity: 0.7;
+      }
+      .uf-footer .brand {
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        color: var(--mantine-color-text);
+      }
+      .uf-footer .sep {
+        color: var(--mantine-color-dimmed);
+        opacity: 0.4;
+      }
+      .uf-footer .meta {
+        margin-top: 8px;
+        font-size: 11px;
+        color: var(--mantine-color-dimmed);
+        opacity: 0.75;
+      }
+    </style>
+
+    <div class="uf-footer">
+      <div style="display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; font-size:13px;">
+        <span class="brand">谐元场域 · 状态监控</span>
+        <span class="sep">/</span>
+        <a href="https://www.ordchaos.com/" target="_blank" rel="noopener noreferrer">主站</a>
+        <span class="sep">/</span>
+        <a href="https://social.ordchaos.com/@ordchaos" target="_blank" rel="noopener noreferrer">联邦宇宙</a>
+        <span class="sep">/</span>
+        <a href="https://github.com/OrdChaos/UptimeFlare" target="_blank" rel="noopener noreferrer">状态页源码</a>
+      </div>
+      <div class="meta">
+        由 <a href="https://github.com/lyc8503/UptimeFlare" target="_blank" rel="noopener noreferrer">UptimeFlare</a> 驱动 · 独立于主站运行
+      </div>
+    </div>
+  `,
 }
 
 const workerConfig: WorkerConfig = {
